@@ -1,0 +1,274 @@
+:root {
+	--ion-color-new: #0e004d;
+	--ion-color-new-rgb: 14,0,77;
+	--ion-color-new-contrast: #ffffff;
+	--ion-color-new-contrast-rgb: 255,255,255;
+	--ion-color-new-shade: #0c0044;
+	--ion-color-new-tint: #261a5f;
+}
+
+.ion-color-new {
+	--ion-color-base: var(--ion-color-new);
+	--ion-color-base-rgb: var(--ion-color-new-rgb);
+	--ion-color-contrast: var(--ion-color-new-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-new-contrast-rgb);
+	--ion-color-shade: var(--ion-color-new-shade);
+	--ion-color-tint: var(--ion-color-new-tint);
+}
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+.med{
+  font-size: 35px;
+    margin:5%;
+}
+.med-blue{
+  color: #2ca8e0;
+}
+.med-orange{
+  color: #f88876;
+}
+.med-green{
+  color: #b6e159;
+}
+.med-details{
+  margin-left: 2%;
+}
+.flex{
+  display: flex;
+  // justify-content: space-around;
+    align-items: center;
+}
+.circle{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color:#0e004d;
+  margin: 15%;
+}
+h1{
+  color: #0e004d;
+    margin-left: 8%;
+    font-weight: 600;
+    margin-top: 0%;
+    font-size: 35px;
+    line-height: 0.8;
+}
+ion-badge {
+  
+  --color: white;
+  position: absolute;
+  --margin: 0px;
+  top:10%;
+  left: 18px;
+  z-index: 1;
+}
+.checks{
+  background-color: #0e004d;
+    color: #fff;
+    position: absolute;
+    font-size: 20px;
+    border-top-left-radius: 10px;
+    width: 35px;
+    height: 40px;
+    bottom: 30px;
+    right: 0px;
+    text-align: center;
+    padding-top: 9px;
+}
+.relative{
+  position: relative;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+// date picker
+#week-view .badge {
+  display: inline-block;
+  margin: 3px;
+  text-transform: uppercase;
+  background: #ddd;
+  color: #777;
+  font-size: 0.663em;
+  padding: 2px 6px;
+}
+.notification{
+  width: 50px;
+  height: 50px;
+  background-color: #fcce3d;
+  color: #0e004d;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#week-view .badge.big {
+  // font-size: 1.25rem;
+  font-size: 15px;
+}
+
+#week-view ul {
+  position: relative;
+  // white-space: nowrap;
+  // overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  margin: 0;
+  padding: 0;
+}
+
+.center,
+.center h1,
+.center h2,
+.center h3,
+.center h4,
+.center h5,
+.center img,
+.center p {
+  text-align: center;
+}
+
+#week-view .btn.border-out {
+  border: 0;
+}
+
+#week-view .btn:hover::before {
+  background: none !important;
+}
+
+
+
+#week-view .week {
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+
+#week-view .prev{
+  left:0px;
+}
+#week-view .next {
+  right:0px;
+  
+}
+
+
+#week-view ul li {
+  display: inline-block;
+  margin: 0;
+  border-bottom: 2px solid transparent;
+  
+ 
+}
+#week-view ul li:hover{
+  
+  border-bottom: 2px solid transparent;
+  border-radius: 8px;
+  background: #fff;
+//   #week-view ul li ion-card, #week-view ion-card {
+//     // margin: 0px 3px;
+//     background-color: #fcce3d;
+// }
+   ion-card{
+    background-color: #fcce3d;
+  }
+  a .text-capitalize{
+    color: #0e004d;
+   
+  }
+  a span{
+    background-color: #0e004d;
+    color: #fff;
+  }
+  
+  a p{
+    display: block;
+    color: #0e004d;
+  }
+}
+#week-view ul li ion-card,#week-view ion-card{
+ margin: 0px 3px;
+}
+
+
+
+#week-view ul li .badge {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+#week-view ul li a {
+  color: #424242;
+  cursor: pointer;
+  // padding: 2%;
+}
+#week-view ul li a .dot{
+  display: flex;
+  justify-content: center;
+}
+
+#week-view ul li a p{
+  font-size: 8px;
+  display: none;
+  font-weight: 600;
+}
+
+#week-view ul li.active {
+  border-color: #37b5aa;
+}
+
+#week-view .text-capitalize {
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+#week-view .isDisabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+#week-view .btn {
+  padding: 0px 5px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+}
+
+#week-view .month-year {
+  margin: 5px 0;
+}

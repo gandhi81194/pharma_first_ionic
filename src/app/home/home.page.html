@@ -1,0 +1,150 @@
+<ion-header>
+  <ion-toolbar color="new">
+    <!-- <div class="bg-blue"> -->
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title> </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!-- </div> -->
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="">
+  <ion-grid>
+    <!-- <ion-row>
+      <ion-col>
+        <h1>Medicine</h1>
+        <h1>Reminder</h1>
+      </ion-col>
+    </ion-row> -->
+    <ion-row>
+      <ion-col id="week-view">
+        <ul class="center">
+          <a class="btn border-out prev" (click)="previousDays()">
+            <ion-icon name="arrow-back"></ion-icon>
+          </a>
+          <ion-grid>
+            <ion-row>
+              <!-- <ion-col class="week-container"> -->
+              <!-- <h1>{{weeks | json}}</h1> -->
+              <!-- <ion-slides
+                [options]="{slidesPerView: true, loop: true }"
+                (ionSlideDrag)="onSlideChange()"
+              > -->
+              <!-- <ion-col> -->
+
+              <ion-col class="week center" *ngFor="let week of weeks">
+                <li class="center" *ngFor="let date of week.dates">
+                  <ion-card>
+                    <a>
+                      <strong class="text-capitalize">
+                        {{date.dayName}}
+                      </strong>
+                      <br />
+                      <span class="badge big">{{date.day}}</span>
+                      <br />
+                      <p class="text-capitalize">{{date.month}}</p>
+                      <div class="dot">
+                        <div class="circle"></div>
+                      </div>
+                    </a>
+                  </ion-card>
+                </li>
+                <!-- </ion-slide> -->
+              </ion-col>
+              <!-- </ion-slides> -->
+              <!-- </ion-col> -->
+            </ion-row>
+          </ion-grid>
+          <a class="btn border-out next" (click)="nextDays()">
+            <ion-icon name="arrow-forward"></ion-icon>
+          </a>
+        </ul>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="relative">
+        <!-- <div class="notify">1</div> -->
+        <ion-badge color="new">1</ion-badge>
+        <ion-card>
+          <div class="flex">
+            <fa-icon [icon]=" faTablets" class="med med-blue"></fa-icon>
+
+            <div class="med-details">
+              <h2>aspirine</h2>
+              <h5>09:00 am</h5>
+            </div>
+          </div>
+          <div class="checks">
+            <fa-icon [icon]="faArrowRight"></fa-icon>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="relative">
+        <ion-badge color="new">2</ion-badge>
+        <ion-card>
+          <div class="flex">
+            <fa-icon [icon]=" faCapsules" class="med med-orange"></fa-icon>
+            <div class="med-details">
+              <h2>Lexapro</h2>
+              <h5>11:00 am</h5>
+            </div>
+          </div>
+          <div class="checks">
+            <fa-icon [icon]="faArrowRight"></fa-icon>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="relative">
+        <ion-badge color="new">3</ion-badge>
+        <ion-card>
+          <div class="flex">
+            <fa-icon [icon]=" faTablets" class="med med-green"></fa-icon>
+
+            <div class="med-details">
+              <h2>L-dio-1</h2>
+              <h5>12:00 am</h5>
+            </div>
+            <div class="checks">
+              <fa-icon [icon]="faArrowRight"></fa-icon>
+            </div>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="relative">
+        <ion-badge color="new">4</ion-badge>
+        <ion-card>
+          <div class="flex">
+            <fa-icon [icon]=" faCapsules" class="med med-blue"></fa-icon>
+            <!-- <i class="fa-solid fa-capsules"></i> -->
+            <div class="med-details">
+              <h2>aspirine</h2>
+              <h5>09:00 am</h5>
+            </div>
+          </div>
+          <div class="checks">
+            <fa-icon [icon]="faArrowRight"></fa-icon>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="notification">
+    <fa-icon [icon]="faBell"></fa-icon>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title> Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
